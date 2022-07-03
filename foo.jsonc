@@ -1,0 +1,5 @@
+{
+   "mounts": [
+       "source=${localEnv:HOME},target=/host_home,type=bind,readonly"
+    ]
+}
