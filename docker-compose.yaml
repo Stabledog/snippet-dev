@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  serv1:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - foo=bar
+        - baz=bat
+  # image: debian
+  # image: artprod.dev.bloomberg.com:dpkg-python-development-base
+    init: true
+    command: sleep infinity
+    volumes:
+      - .:/workspace
+      - ${HOME}:/host_home:ro
